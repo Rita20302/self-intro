@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5練習</title>
+    <!-- 頁內樣式表設定 -->
+    <style type="text/css">
+ <body background="https://tw.seeing-japan.com/wp-content/uploads/2019/11/73cedf46c911b7d7264074fe52a8e1bc_m.jpg">
+      body {
+        background:rgb(245,245,245);
+        font-family:微軟正黑體;
+        margin:0px;
+      }
+
+      h1 {
+        font-weight:bold;
+        font-size:36px;
+        color: #233F69;
+        text-shadow:2px 2px 4px gray;
+        border-left:4px solid red;
+        padding-left: 10px;
+        line-height: 1em;
+      }
+
+      h2 {
+        font-size:24px;
+        color:black;
+        text-shadow:1px 1px 3px gray;
+      }
+
+      p {
+        font-size:12pt;
+        line-height:1.8; /* 行高 */
+      }
+
+      #wrap{
+        margin:0px;
+      }
+
+      #container{
+        width:980px;
+        margin:10px auto;
+      }
+
+      #header{
+
+      }
+
+      #main{
+        background:rgb(255,255,255);
+        position: relative;
+      }
+
+      #sidebar_left{
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width: 200px;
+      }
+
+      #content{
+        position: relative;
+        top:0px;
+        left: 200px;
+        width:518px;
+        padding:30px;
+        border-left: 1px solid #cfcfcf;
+        border-right: 1px solid #cfcfcf;
+      }
+
+      #sidebar{
+        position: absolute;
+        top:0px;
+        left: 780px;
+        width: 200px;
+      }
+
+      #footer{
+
+      }
+
+      ul.nav{
+        background-color: #EDEDED;
+        height:40px;  /* 讓工具列不要太扁 */
+        line-height: 40px;  /* 讓按鍵垂直置中 */
+        padding: 0px; /* 取消工具列左邊的空白 */
+      }
+
+      ul.nav li{
+        display: inline;  /* 讓清單變成一橫列 */
+        list-style-type:none; /* 把項目符號取消 */
+      }
+
+      ul.nav li > a{  /* 正常狀態的連結按鈕 */
+        color:black;  /* 黑色 */
+        text-decoration: none;  /* 去除底線 */
+        padding: 10px 20px; /* 和隔壁按鈕區隔開來 */
+      }
+
+      ul.nav li > a:hover{  /* 滑鼠移到連結按鈕上時 */
+        color:white;  /* 文字變白色 */
+        background-color: #000000;  /* 背景變黑色 */
+      }
+    </style>
+
+  </head>
+
+  <body background="https://tw.seeing-japan.com/wp-content/uploads/2019/11/73cedf46c911b7d7264074fe52a8e1bc_m.jpg">
+
+    <div id="wrap">
+      <div id="container">
+        <div id="header">
+          <a name="tool"></a>
+          <ul class="nav">
+            <li><a href="#p1">自我介紹</a></li>
+            <li><a href="#p2">喜愛&興趣</a></li>
+            <li><a href="#p3">如何找到我?</a></li>
+          </ul>
+        </div>
+
+        <div id="main">
+
+          <div id="sidebar_left">
+<img src="https://i.pinimg.com/236x/30/25/6a/30256a79ea91912f9022d01a631868a4.jpg" alt="logo圖" title="logo圖" style="width:100%;">
+            <h1>王青芸</h1>
+            <h3>"沒有誰日子過得艱辛，只有誰能夠從中去享受人生。"</h3>
+            <h3>目前狀態:看淡世間繁華</h3>
+            <h4>喜歡的食物:無糖綠茶，黑巧克力</h4>
+            <h4>網名:星蒼</h4>
+          </div>
+
+          <div id="content">
+
+            <h1>使用Html製作自我介紹網頁</h1>
+
+            <div>
+              <h2><a name="p1">大家好，我是王青芸</a></h2>
+              
+               <p>    這次主要學習並運用<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics">HMTL</a>來製自我介紹網頁。</p>
+              <p>我是<a href="http://www.fhsh.tp.edu.tw/">復興高中</a>高二生。</p>
+              <p>目前正在初步學習HTML、打算精熟JS，以及讀書，培養更多興趣和對於未來有一定節奏規劃。</p>
+             <img src="data:image/jpeg;base64,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" alt="logo圖" title="logo圖" style="width:100%;">
+               
+               <a href="#tool">Go back</a>
+            </div>
+
+            <div>
+              <h2><a name="p2">喜愛&興趣</a></h2>
+              
+              <p>喜愛研究生物化學以及觀察生物，雖然算不上非常優秀，但仍然保持著熱情。</p>
+              <p>另外的興趣為拍攝風景。</p>
+              <img src="https://images.669pic.com/element_min_new_pic/82/72/53/6/c2d3ba37091aa5617933b772373ef90c.png" alt="logo圖" title="logo圖" style="width:100%;">
+              
+              <img src="https://www-1.baobaonews.com/gotvimgs/view/imgs/c2d4a445-ee1d-42c1-afef-31e251cc1114-1494657005369" alt="logo圖" title="logo圖" style="width:100%;">
+              
+              <a href="#tool">Go back</a>
+              
+            </div>
+
+            <div>
+              <h2><a name="p3">如何找到我?</a></h2>
+              
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28894.23659975567!2d121.502264!3d25.143142!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c654f929ad67cd3!2z6Ie65YyX5biC56uL5b6p6IiI6auY57Sa5Lit5a24!5e0!3m2!1szh-TW!2stw!4v1619109495458!5m2!1szh-TW!2stw" width="520" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+              
+              <a href="#tool">Go back</a>
+              
+            </div>
+
+          </div>
+
+          <div id="sidebar">
+<img src="https://i.pinimg.com/564x/2f/e1/ba/2fe1baae21be011de71f7d92d74cab07.jpg" alt="logo圖" title="logo圖" style="width:100%;">
+            <h1>最近時事</h1>
+            <h3>在某間高級中學，一位資訊老師已經蓄勢待發，203班即將面臨被噴爆作業!?</h3>
+            <h3>經過精密的研究報告指出...是最難的科目!?</h3>
+            <h3>天氣預報:明日為晴時多雲偶，反正不下雨就是了</h3>
+          </div>
+
+        </div>
+
+        <ul class="nav">
+          <li><a href="#p1">自我介紹</a></li>
+          <li><a href="#p2">喜愛&興趣</a></li>
+          <li><a href="#p3">如何找到我?</a></li>
+        </ul>
+
+        <div id="footer">
+          
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
